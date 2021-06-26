@@ -138,9 +138,8 @@ public class BoardController {
      @GetMapping("/board_detail")
      public String BoardDetail(Model model, @RequestParam(required=false) Long id) {   // �옄�꽭�엳蹂닿린
      
-    	 Optional<Board> board = boardRepository.findById(id);
+    	 Board board = boardRepository.findById(id).orElse(null);
      	
-            
       	model.addAttribute("board", board);
 
        return "board/board_detail";

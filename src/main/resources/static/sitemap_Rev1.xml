@@ -25,8 +25,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-    <url>
+      <url>
     <loc>http://activebuling.com/categori5/cate_5_index</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+    <url>
+    <loc>http://activebuling.com/board/board_list</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

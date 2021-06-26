@@ -25,25 +25,49 @@
 
 
     <div class="container mt-5 mb-5">
+    
+    
+		<form class="text-center border border-light p-5" action="/board/board_form" th:object="${boards}" method="POST">
+
+			<input type="hidden" th:field="*{id}">
+				<!-- Sign in button -->
+			<div class=" mb-5">
+				<button type="submit" class="btn btn-primary">확인</button>
+				<a type="button" class="btn btn-primary"  th:href="@{/board/board_list}">리스트</a>
+			</div>
+	
+			<!-- title -->
+			<textarea class="form-control mb-4" id="title" rows="2" name="title"
+				th:field="*{title}">title </textarea>
+
+			<!-- content -->
+			<textarea class="form-control mb-4" id="content" rows="5" name="content"
+				th:field="*{content}">content </textarea>
+
+			<textarea class="form-control mb-4" id="content1" rows="5" name="content1"
+				th:field="*{content1}">content1 </textarea>
+		</form>
+
 
         <table class="table1">
             <p class="person1">******************** 게시판 ******************** </p>
 
             <tbody class="" th:object="${board}">
+            <input type="hidden" th:field="*{id}">
                 <tr>
                     <th scope="row" class="row1 row_1_1 border border-secondary">NO</th>
-                    <td class="row2 row_1_2 border border-secondary">
-                        <h3>[[${board.id}]]</h3>
+                    <td class="row2 row_1_2 border border-secondary" th:field="*{id}">  
+						<h2>[[${board.id}]] </h2>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row" class="row1 row_2_1 border border-secondary">제목</th>
-                    <td class="row2 row_2_2 border border-secondary" th:field="*{title}">[[${board.title}]]</td>
+                    <td class="row2 row_2_2 border border-secondary" th:field="*{title}" >[[${board.title}]]</td>
 
                 </tr>
                 <tr>
                     <th scope="row" class="row1 row_3_1 border border-secondary">내용</th>
-                    <td class="row2 row_3_2 border border-secondary" th:field="*{content}">[[${board.content}]]</td>
+                    <td class="row2 row_3_2 border border-secondary" th:field="*{content}"> [[${board.content}]]</td>
 
                 </tr>
                 <tr>
@@ -79,14 +103,14 @@
 		    </tr>
 		</tbody>
 	</table>-->
-    <div class="container mb-5">
+ <!--   <div class="container mb-5">
         <div class="text-right">
             <a type="button" class="btn btn-primary" th:href="@{/board/board_form(id=${board.id})}">수정</a>
             <a th:href="@{/board/deleteProd/{id}(id=${board.id})}" class="btn btn-danger">삭제</a>
             <a type="button" class="btn btn-primary" th:href="@{/board/board_list}">리스트</a>
         </div>
     </div>
-
+-->
 
     <div class="footer" th:replace="fragments/common :: footer2('footer2')">
     </div>
