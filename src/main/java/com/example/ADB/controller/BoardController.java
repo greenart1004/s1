@@ -3,6 +3,7 @@ package com.example.ADB.controller;
 import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -124,7 +125,7 @@ public class BoardController {
      	
          boardRepository.save(p);
     	 
-    	 Board boards = boardRepository.findById(id).orElseThrow();
+    	 Optional<Board> boards = boardRepository.findById(id);
      	 model.addAttribute("boards", boards);	
          
      	 return "board/board_detail";
@@ -137,7 +138,7 @@ public class BoardController {
      @GetMapping("/board_detail")
      public String BoardDetail(Model model, @RequestParam(required=false) Long id) {   // �옄�꽭�엳蹂닿린
      
-    	 Board board = boardRepository.findById(id).orElseThrow();
+    	 Optional<Board> board = boardRepository.findById(id);
      	
             
       	model.addAttribute("board", board);
