@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko"  xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head(title)">
+
+ 	<meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <meta name="naver-site-verification" content="54be4e23d9d2124b730c724c538ca2a9641c1b4e" />
+    <meta name="msvalidate.01" content="350C29845D2288E79D6F7DA1DAEA8197" />
+
+	<meta name="robots" content="index, follow">
+   	
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1" >
+    
+	<meta name="Title" content="즐거운 쇼핑 BulingG 블링지" >
+    <meta name="Description" content="우리 생활의 다양하고 즐거운 쇼핑을 위해 생활용품 및 각종 상품을 종합 정리하여 제공하는 사이트">
+
+    <meta name="author" content="BulingG">
+    <meta name="copyright" content="BulinG" >
+	<meta name="subject" content="BulinG Shop" >
+    <meta name="Keyword" content="자동차, 타이어, 공구, 도서, 음반, 슈퍼, 백화점, 홈쇼핑, 해외직구, 렌탈, 여행, 항공권, 숙박, 호텔, 예약, 땡처리항공권, 도서, 인터파크티켓, 상품권, 음식배달, 배달앱, 사업자, 중고, 브랜드패션, 패션의류, 수입명품, 명품화장품, 뷰티, 화장품/향수, 유아동, 기저귀, 분유, 육아용품, 장난감, 아동도서, 식품, 생필품, 홈데코, 가구/DIY, 침구, 조명/인테리어, 꽃/이벤트용품, 문구/사무용품, 취미, 악기/수집, 반려동물용품, 컴퓨터, 노트북, 모니터, SSD, 휴대폰, 카메라, 태블릿, 게임, 가전, 스포츠, 건강, 공연티켓, 상품권, 인터넷쇼핑몰, 온라인몰">
+    
+    <meta property="og:title"           content="즐거운 쇼핑 BulingG 블링지">          <!--  3.  타 매체에 전달해주기위해     -->
+	<meta property="og:site_name"       content="BulinG Shop">
+	<meta property="og:type"            content="website">
+	<meta property="og:url"             content="http://www.activebuling.com">
+	<meta property="og:description" 	content="다양한 생활의 즐거운 쇼핑">
+	
+	<meta name="twitter:card" content="BulinG Shop">
+	<meta name="twitter:title" content="즐거운 쇼핑 BulingG 블링지">
+	<meta name="twitter:description" content="우리 생활의 다양하고 즐거운 쇼핑을 위해 생활용품 및 각종 상품을 종합 정리하여 제공하는 사이트">
+	<meta name="twitter:image" content="img/buling_title.jpg">
+	<meta name="twitter:domain" content="BulinG Shop">
+	
+	<link rel="canonical" href="http://www.activebuling.com"> <!--  3.  대표url     -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">                       <!--  2.  폰트관련     -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">  
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    	integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" 
+    	crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" 
+    	integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" 
+    	crossorigin="anonymous">
+    </script>
+    
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+  	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+    <!--	<link href="/css/reset.css" th:href="@{/css/reset.css}" rel="stylesheet">-->
+    <link href="/css/starter.css" th:href="@{/css/starter.css}" rel="stylesheet">
+    <link href="/css/detailform.css" th:href="@{/css/detailform.css}" rel="stylesheet">
+    <link href="/css/index1.css" th:href="@{/css/index1.css}" rel="stylesheet">
+    <link href="/css/cate_1_index.css" th:href="@{/css/cate_1_index.css}" rel="stylesheet">
+    <link href="/css/detailform.css" th:href="@{/css/detailform.css}" rel="stylesheet">
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <title th:text="${title}">BulingG</title>
+
+</head>
+
+  <body>  
+    <nav class="navbar navbar-expand-md navbar-dark bg-success " th:fragment="menu(menu)">
+        <a class="navbar-brand navbar-top" href="/">BlingG</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse position-relative" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto fw-bold">
+                
+<!--            <li class="nav-item">
+		          <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+		        </li>
+		        <li class="nav-item">
+		          <a class="nav-link" href="#">Notifications</a>
+		        </li>
+                -->
+                <li class="navbar-top nav-item" th:classappend="${menu} == 'home'? 'active'">  <!---->
+                    <a class="nav-link" href="#" th:href="@{/}">Home <span class="sr-only" th:if="${menu} == 'home'">(current)</span></a>
+                </li>
+			 	<li class="navbar-top nav-item" th:classappend="${menu} == 'cate1_index'? 'active'">
+                	<a class="nav-link" href="#" th:href="@{/categori/cate_1_index}">화장품/미용<span class="sr-only" th:if="${menu} == 'cate1_index'">(current)</span></a>
+                </li> 
+
+
+			 	<li class="navbar-top nav-item" th:classappend="${menu} == 'cate2_index'? 'active'">
+                	<a class="nav-link" href="#" th:href="@{/categori2/cate_2_index}">패션잡화<span class="sr-only" th:if="${menu} == 'cate2_index'">(current)</span></a>
+                </li> 
+			 	<li class="navbar-top nav-item" th:classappend="${menu} == 'cate3_index'? 'active'">
+                	<a class="nav-link" href="#" th:href="@{/categori3/cate_3_index}">디지털/가전<span class="sr-only" th:if="${menu} == 'cate3_index'">(current)</span></a>
+                </li> 
+			 	<li class="navbar-top nav-item" th:classappend="${menu} == 'cate4_index'? 'active'">
+                	<a class="nav-link" href="#" th:href="@{/categori4/cate_4_index}">가구/인테리어<span class="sr-only" th:if="${menu} == 'cate4_index'">(current)</span></a>
+                </li> 
+			 	<li class="navbar-top nav-item" th:classappend="${menu} == 'cate5_index'? 'active'">
+                	<a class="nav-link" href="#" th:href="@{/categori5/cate_5_index}">패션의류<span class="sr-only" th:if="${menu} == 'cate5_index'">(current)</span></a>
+                </li> 
+ 
+<!--                <li class="nav-item" >
+                	<a class="nav-link" href="/product/product_list" >블로그</a>
+                </li>  -->
+                <li class="navbar-top nav-item"  th:classappend="${menu} == 'board_list'? 'active'" >
+                	<a class="nav-link" href="/board/board_list" >게시판<span class="sr-only" th:if="${menu} == 'board_list'">(current)</span></a>
+                </li>
+
+<!--                <li class="nav-item" th:classappend="${menu} == 'board'? 'active'">
+                    <a class="nav-link" href="#" th:href="@{/product/product_list}">리스트 <span class="sr-only" th:if="${menu} == 'board'">(current)</span></a>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+
+
+
+<div class="fs-5 mt-5" th:fragment="footer1(footer1)">
+	본 사이트는 “파트너스 활동을 통해 일정액의 수수료를 제공받을 수 있음” AMAT P/N : 0020-30195<br>
+	본 사이트는 2021-06-25 작성되었으며 판매가와 재고의 변동이 있을 수 있습니다.	<br>			
+	본 사이트는 해당 상품의 주체가 아니며 상품의 주문,반품 등 의무,책임은 각 판매자에게 있습니다.<br>
+</div>
+
+<div id="footer" class="bg-warning" role="footer" th:fragment="footer2(footer2)">
+    <div class="footer" >
+        <ul>
+            <li>
+                &copy;2020-2021 Copyright&copy; activeBuling.co.kr All Right Reserved
+            </li>
+       </ul>
+    </div>
+</div>
+
+<!--		   <p class="text-center"  th:if="${m.index+1}<5"   th:text="${m.index+1}"> <b>100ml, 30개</b></p>-->
+<!--		   <p class="text-center"  th:unless="(m.index+1)==2"   th:text="${m.index+2}"> <b>100ml, 30개</b></p>-->
+  </body>  
+</html>

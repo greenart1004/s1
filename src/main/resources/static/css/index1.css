@@ -1,0 +1,368 @@
+/* 1 홈 bar ================================================ */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container3 {
+    display: flex;
+    width:  80%;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0 auto;
+}
+
+.navbar-top{
+	font-size: 20px;
+	
+}
+
+
+
+.parent {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    background-color: green;
+}
+
+.child {
+    text-align: center;
+    font-size: 20px;
+    color:#fff;
+    height: 70px;
+    line-height: 70px;              /* text를 세로로 가운데 정렬 */
+    /* flex-grow: 1;
+    flex-basis: 300px; */
+    flex : 1 50px;
+    border-right: beige solid 1px;
+}
+
+.child a {
+    color: #fff; text-decoration: none; outline: none ;
+}
+
+.child:nth-child(5) {
+    flex:8 ;
+    font-size: 13px;
+    text-align: right;
+    /* background-color: beige; */
+}
+
+
+/* 2 /3 ================================================ */
+.b1{
+    display : flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* 4 ================================================ */
+
+
+.pp {
+    
+    padding-top: 10px;
+    text-align: left;
+    width:  100%;
+    flex-wrap: wrap;
+    /* background-color: #ddd; */
+
+}
+
+/* cartegori_1-1 ================================================ */
+.container1_1{
+    display: flex;
+    justify-content: center;
+  /*  align-items: center;*/
+
+}
+
+.card-items_1 {
+    /* border: 2px solid #000; */
+    flex-wrap: wrap;
+    width:  80%;
+
+    display: flex;                     /* 하위 아이템들이 가로로 정렬 */
+       /* 양쪽 붙고 정렬 */
+       
+    justify-content: space-between; 
+}
+
+
+.card_1 {
+    border : 1px solid rgb(192, 192, 192);
+    width: 230px;
+    padding: 5px;
+    box-sizing: border-box;    /* 박스를 띄우기 */
+    height: 350px;
+
+    margin-right: 5px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/*=cartegori_1-2 =========================================================*/
+
+.container1_2{
+  /*  align-items: center;*/
+}
+
+.card-items_2 {
+    /* border: 2px solid #000; */
+    /* 하위 아이템들이 가로로 정렬 */
+    /* 양쪽 붙고 정렬 */
+}
+
+
+/*==========================================================*/
+
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-items {
+    /* border: 2px solid #000; */
+    flex-wrap: wrap;
+    width:  80%;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;                     /* 하위 아이템들이 가로로 정렬 */
+    justify-content: space-between;        /* 양쪽 붙고 정렬 */
+}
+
+
+.card {
+
+    width: 230px;
+    height:350px;
+
+    padding: 5px;
+    box-sizing: border-box;    /* 박스를 띄우기 */
+
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bb1_2{ 
+	font-size: 30px;
+	cursor:pointer;
+    color: rgb(30, 72, 210);
+    text-decoration :underline;
+    margin-bottom: 50px;
+}
+
+.card img {
+    width: 100%;
+}
+
+
+.p1{
+    font-size: 15px;
+}
+
+.p2{
+    font-size: 16px;
+}
+
+
+/* categori_6 ========================================================================================================== --> */
+.cate_6_container {
+    width:  80%;
+    margin: 0 auto;
+}
+
+.cate_6_container *{
+	padding:0;
+	margin:0;
+}
+
+.cate_6_add{
+
+}
+
+.cate_6_img{
+	width:100%;
+}
+
+.cate_6_body{
+	
+}
+
+.cate_6_body_p1{
+	font-size: 30px;
+	color:rgb(128, 0, 0);
+}
+
+.cate_6_body_p2{
+	font-size: 20px;
+	color:black;
+
+}
+
+.cate_6_body_p3{
+	
+}
+
+/*======================================================*/
+
+.cate_7_img{
+	width:100%;
+}
+
+
+/*================================================ */
+
+.about{}
+
+.inner{ }
+    .about-content {
+        flex-wrap: wrap;
+        display: flex;
+        width:  80%;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;         
+                                                /* 세로로 센터 정렬 */
+        justify-content: center;
+                                                /* 가로로 센터 정렬 */
+     /*   margin-bottom: 30px;*/
+        /* border:royalblue solid 1px; */
+    }
+
+
+	.about-content div {
+	    padding: 30px;
+	}
+	
+	
+	/*================================================= */
+	.desc {
+	    flex: 3 300px;
+	  background: #eee;
+	}
+	
+	
+	.desc h2{
+	    font-size: 30px;
+	    margin-bottom: 30px;
+	}
+	
+	
+	.desc p{
+	    font-size: 16px;
+	    line-height: 1.7em;         /* 줄간격 */
+	}
+	
+	
+	.desc a{
+	    text-decoration: none;
+	    color: #c25a3a;
+	    /* height: 100%; */
+	}
+	
+	
+	.desc a:hover { 
+	    text-decoration: underline;
+	}
+	
+	
+	.photo {
+	    flex: 2 100px;
+	}
+	
+	
+	.photo  img {
+	    width: 300px; 
+	    border-radius: 10% 10% 15% 15% / 20% 25% 25% 30%  ;
+	}
+
+
+	@media(min-width: 919px) and (max-width:2000px) {
+	    .photo  {
+	        /* border-right:royalblue solid 1px; */
+	    }
+	}
+	
+	
+	@media(max-width: 918px) {
+	    .photo  {
+	        border-bottom:royalblue solid 1px;
+	    }
+	} 
+
+	/* 푸터 */
+	.footer {padding: 25px 0; height:200px; text-align: center;}
+	.footer ul {margin-bottom: 20px;}
+	.footer li {position: relative; display: inline; padding: 0 7px 0 10px;}
+	.footer li:before {content: ''; width: 1px; height: 12px; background: #ccc; position: absolute; left: 0; top: 2px;}
+	.footer li:first-child:before {width: 0; height: 0;}
+	.footer .w3c {margin-top: 15px;}
+
+
+/*===== starter ============================================================*/
+
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.pp2{
+  /*  background-color: greenyellow;*/
+    margin-top: 20px;
+}
+
+.pp3{
+    /*  background-color: greenyellow;*/
+      margin-top: 20px;
+  }
+  
+  /*=========================================================================*/
+  
+  .board_big1 {
+       background-color: greenyellow;
+}
+
+
+/* ================================================ */
+/* flex:[ <flex-grow> <flex-shrink> <flex-basis>] | auto | initial */
+
+
+/* @media(min-width: 1511px) and (max-width:1800px) {
+    .child {
+        font-size: 20px;
+    }
+}
+
+@media(min-width: 1024px) and (max-width:1511px) {
+    .child {
+        font-size: 15px;
+    }
+}
+
+@media(min-width: 768px) and (max-width:1024px) {
+    .child {
+        font-size: 15px;
+    }
+
+} */
+
+/* @media(max-width: 767px) {
+    .child {
+        font-size: 10px;
+    }
+} */
+
+/*=Board==========================================================*/
+

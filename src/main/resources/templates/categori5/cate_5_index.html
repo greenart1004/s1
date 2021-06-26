@@ -1,0 +1,89 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/common :: head('BlingG')">
+</head>
+
+<body>
+
+
+<!--===1 header====================================================================================================-->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('cate5_index')">
+    </nav>
+
+
+<!--===2 search====================================================================================================-->
+    <div class="cate_1_index_container my-5">
+        <form class="form-inline d-flex justify-content-end" method="GET" th:action="@{/categori5/cate_5_index}">
+            <div class="form-grop mx-sm-3 mb-2">
+                <label for="searchText" class="sr-only">검색</label>
+                <input type="text" class="form-control" id="searchText" placeholder="검색" name="searchText" th:value="${param.searchText}">
+            </div>
+            <button type="submit" class="btn btn-success mb-2 mr-2">검색</button>
+			<div class="d-md-flex justify-content-md-end">
+	            <a type="button" class="btn btn-success mb-2" th:href="@{/categori5/cate_5_index}">전체 리스트</a>
+	        </div>
+        </form>
+   </div>  
+   
+   
+<!--=====3 navbar==================================================================================================-->
+	
+<div class="cate_1_index_container navbar navbar-expand-md navbar-danger bg-success mb-2 color-light"  style="height : 50px">
+	<div class="cate_1_index_navbar order border-success">
+		<!--총 건수 : <span th:text="${cates5.totalElements}"></span>-->
+	</div>
+</div>
+
+  <div class="cate_1_index_container">
+	<div class="row">
+	  <div class="cate_1_index_card col-6 col-sm-4 col-md-3 col-lg-3  col-xl-2 " th:each="cate : ${cates5}">  <!-- xs<576px  sm≥576px  md≥768px   lg≥992px   xl≥1200px-->
+		<div class="cate_1_index_img-top">
+		    <a  class="img1" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">  
+			      <!--<img alt="" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}" >-->
+			      <img th:src="@{''}+${cate.content2}" />
+		    </a>
+		</div>
+		<div class="cate_1_index_card-body">
+		      <span class="cate_1_index_card-title" th:text="${cate.name}">Card title</span><br><br>
+		      <p class="cate_1_index_card-text" th:text="${cate.description}">This is a wider </p>
+		</div>
+		<div class="cate_1_index_card-footer">
+		<a th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	    	<div class="cate_1_index_card-footer-p2 text-center btn-lg btn-success" th:text="${cate.price}">13,080원</div>  
+		</a>
+		</div>
+	  </div><br>
+	</div>
+</div>
+
+
+  <!--=====4 index==================================================================================================-->
+ 
+   <div class="cate_1_index_container">
+<!--   		<div class="d-md-flex justify-content-md-end">
+           <a type="button" class="btn btn-sucess mb-2" th:href="@{/categori5/cate_5_list}">리스트 및 수정</a>
+        </div>-->
+   		<nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item" th:classappend="${1 == cates5.pageable.pageNumber + 1} ? 'disabled'">
+                    <a class="page-link" href="#" th:href="@{/categori5/cate_5_index(page= ${cates5.pageable.pageNumber - 1},searchText=${param.searchText})}">Previous</a>
+                </li>
+				<li class="page-item" th:classappend="${i == cates5.pageable.pageNumber + 1} ? 'disabled'" th:each="i : ${#numbers.sequence(startPage, endPage)}">
+                    <a class="page-link" href="#" th:href="@{/categori5/cate_5_index(page= ${i-1},searchText=${param.searchText})}" th:text="${i}">1</a>
+                </li>
+                <li class="page-item" th:classappend="${cates5.totalPages == cates5.pageable.pageNumber + 1} ? 'disabled'">
+                    <a class="page-link" href="#" th:href="@{/categori5/cate_5_index(page= ${cates5.pageable.pageNumber + 1},searchText=${param.searchText})}">Next</a>
+                </li>
+            </ul>
+        </nav>
+	</div><br><br><hr>   
+
+<!--=====5 footer==================================================================================================-->
+<div class="fs-5 mt-5" th:replace="fragments/common :: footer1('footer1')">
+</div>
+
+<div class="footer" th:replace="fragments/common :: footer2('footer2')">
+</div>
+
+</body>
+</html>

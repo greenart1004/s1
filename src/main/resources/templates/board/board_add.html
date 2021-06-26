@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/common :: head('게시판')">
+</head>
+
+<body>
+
+
+<!--===1 header====================================================================================================-->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('board_list')">
+    </nav>
+    
+    <div class="container my-5" style="height: 65%;">
+		<form class="text-center border border-light p-5" action="/board/board_add" th:object="${boards}" method="POST" >
+
+			<textarea class="form-control mb-4" id="title" name="title"
+				placeholder="제목 "></textarea>
+				
+			<textarea class="form-control mb-4" id="content" rows="5" name="content"
+			placeholder="내용"></textarea>
+			
+			<textarea class="form-control mb-4" id="content1" rows="3" name="content1"
+			placeholder="기타"></textarea>
+
+   			<div class="d-md-flex justify-content-md-end">
+	  			<button type="submit" class="btn btn-primary mr-2">등록</button>	
+	  			<a 		type="button" class="btn btn-primary" th:href="@{/board/board_list}">돌아가기</a>
+      		</div>
+		</form>
+   </div>
+       
+<div class="footer" th:replace="fragments/common :: footer2('footer2')">
+</div>
+
+</body>
+
+</html>

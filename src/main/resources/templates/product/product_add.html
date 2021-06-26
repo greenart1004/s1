@@ -1,0 +1,217 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('게시판')">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <!--   <link href="/css/starter.css" th:href="@{/css/starter.css}" rel="stylesheet">-->
+
+    <title>게시판</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('board')">
+    </nav>
+    
+    <div class="container my-5">
+
+
+		<form class="text-center border border-light p-5" action="/product/product_add" th:object="${product}" method="POST" enctype="multipart/form-data">
+
+			<!-- Name -->
+			<input  name="pname" id="name" class="form-control mb-4"
+				placeholder="Product name"></input>
+
+			<!-- Price -->
+			<input  name="price" id="price" class="form-control mb-4"
+				placeholder="10000  숫자반드시 입력할것"></input>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="description"
+				placeholder="Product Description"></textarea>
+	
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content1"
+				placeholder="선택이유등"></textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content2"
+				placeholder="Product content2">구성및기능1 : </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content3"
+				placeholder="Product content3">구성및기능2 : </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content4"
+				placeholder="Product content4">구성및기능3 : </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content5"
+				placeholder="Product content5">구성및기능4 : </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content6"
+				placeholder="링크1"></textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content7"
+				placeholder="감성자극"></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content8"
+				placeholder="장점"></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content9"
+				placeholder="링크2"></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content10"
+				placeholder="타제품 비교 "></textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content11"
+				placeholder="쿠팡파트너스 문구"></textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content12"
+				placeholder="##### "></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content13"
+				placeholder="Product content13">Product content13 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content14"
+				placeholder="Product content14">Product content14 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content15"
+				placeholder="Product content15">Product content15 </textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content16"
+				placeholder="Product content16">Product content16</textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content17"
+				placeholder="Product content17">Product content17 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content18"
+				placeholder="Product content18">Product content18 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content19"
+				placeholder="Product content19">Product content19 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content20"
+				placeholder="Product content20">Product content20 </textarea>
+
+			<!-- image-file etc. -->
+			<div class="custom-file mb-4">
+				<input type="file" name="file" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile" placeholder="Product Image">Product Image</label>
+			</div>
+			
+			<!-- image-file etc. -->
+			<div class="custom-file mb-4">
+				<input type="file" name="file1" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile" placeholder="Product Image1">Product Image1</label>
+			</div>
+			
+			<!-- image-file etc. -->
+			<div class="custom-file mb-4">
+				<input type="file" name="file2" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile" placeholder="Product Image2">Product Image2</label>
+			</div>
+			
+			<!-- Sign in button -->
+			<button class="btn btn-info btn-block" type="submit">add</button>
+		</form>
+		
+ </div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        
+        
+        
+	<div id="footer " class="mt-5 bg-warning" role="footer">
+	    <div class="footer">
+	        <ul>
+	            <li>
+	                Copyright&copy; activeBuling.co.kr All Right Reserved
+	            </li>
+	       </ul>
+	    </div>
+	</div>
+
+
+
+</body>
+
+</html>
+
+
+
+<!--
+<div class="card">
+	<div class="card-header">
+		<p class="h4 mb-2 text-center">Add Product</p>
+	</div>
+	<div class="card-body">-->
+
+		<!-- ==================================================================================================================== -->
+
+	<!--<form class="text-center border border-light p-5" action="/product/product_add" method="POST" enctype="multipart/form-data">
+
+		
+			<input type="text" name="pname" id="name" class="form-control mb-4"
+				placeholder="Product Name">
+
+			
+			<input type="text" name="price" id="price" class="form-control mb-4"
+				placeholder="Product Price">
+
+		
+			<textarea class="form-control mb-4" id="desc" name="desc"
+				placeholder="Product Description">Product Description </textarea>
+
+		
+			<div class="custom-file mb-4">
+				<input type="file" name="file" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile">Product Image</label>
+			</div>
+
+
+			<button class="btn btn-info btn-block" type="submit">add</button>
+		</form>
+-->
+	<!-- ==================================================================================================================== -->
+
+<!--
+	</div>
+</div>-->
+<!-- Default form subscription -->

@@ -1,0 +1,265 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('게시판')">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <!--   <link href="/css/starter.css" th:href="@{/css/starter.css}" rel="stylesheet">-->
+
+    <title>게시판</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('board')">
+    </nav>
+    
+    <div class="container my-5">
+	        <h2>수정하기</h2>
+	        
+	<form class="text-center border border-light p-5" action="/product/product_form" th:object="${product}" method="POST" enctype="multipart/form-data">
+
+			<input type="hidden" th:field="*{id}">
+				<!-- Sign in button -->
+			<button type="submit" class="btn btn-primary">확인</button>
+			<a type="button" class="btn btn-primary"  th:href="@{/product/product_list}">리스트</a>
+
+			<!-- Name -->
+			<input type="text" name="name" id="name" class="form-control mb-4"
+				 th:field="*{name}">
+
+			<!-- Price -->
+			<input type="text" name="price" id="price" class="form-control mb-4"
+				 th:field="*{price}">
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="description"
+				 th:field="*{description}">Product Description </textarea>
+
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content1"
+				 th:field="*{content1}">Product content1 </textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content2"
+				 th:field="*{content2}">Product content2 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content3"
+				 th:field="*{content3}">Product content3 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content4"
+				 th:field="*{content4}">Product content4 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content5"
+				 th:field="*{content5}">Product content5 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content6"
+				 th:field="*{content6}">Product content6 </textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content7"
+				 th:field="*{content7}">Product content7 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content8"
+			 th:field="*{content8}">Product content8 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content9"
+				 th:field="*{content9}">Product content9 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content10"
+				 th:field="*{content10}">Product content10 </textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content11"
+				 th:field="*{content11}">Product content11</textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content12"
+				 th:field="*{content12}">Product content12 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content13"
+			 th:field="*{content13}">Product content13 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content14"
+				 th:field="*{content14}">Product content14 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content15"
+				 th:field="*{content15}">Product content15 </textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content16"
+				 th:field="*{content16}">Product content16</textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content17"
+				 th:field="*{content17}">Product content17 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content18"
+				 th:field="*{content18}">Product content18 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content19"
+			 th:field="*{content19}">Product content19 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content20"
+				 th:field="*{content20}">Product content20 </textarea>
+
+	</form>
+
+
+
+		<!--<form class="mt-5" action="/product/product_form" th:object="${product}" method="post"  method="POST" enctype="multipart/form-data">
+		    <div class="text-right">
+		            <a type="button" class="btn btn-primary"  th:href="@{/product/product_list}">리스트</a>
+		            <button type="submit" class="btn btn-primary">확인</button>
+	        </div>
+        
+	        <input type="hidden" th:field="*{id}">
+	         
+	        <div class="form-group">
+	            <label for="title">name</label>
+	            <input type="text" class="form-control" id="name" th:field="*{name}">
+	        </div>
+	        
+	        <div class="form-group">
+	            <label for="content">description</label>
+	            <textarea class="form-control" id="description" rows="4" th:field="*{description}"></textarea>
+	        </div>
+	      
+	        <div class="form-group">
+	            <label for="content1">price</label>
+	            <textarea class="form-control" id="price" rows="4" th:field="*{price}"></textarea>
+	        </div>
+	        
+			<div class="custom-file mb-4">
+				<input type="file" name="file" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile" placeholder="Product Image">Product Image</label>
+			</div>
+	    </form>-->
+
+
+    </div>
+		
+		
+		
+
+
+
+	
+ 	</div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+        
+	<div id="footer " class="mt-5 bg-warning" role="footer">
+	    <div class="footer">
+	        <ul>
+	            <li>
+	                Copyright&copy; activeBuling.co.kr All Right Reserved
+	            </li>
+	       </ul>
+	    </div>
+	</div>
+
+
+
+</body>
+
+</html>
+
+
+
+<!--	    <form action="/product/save" method="post" enctype="multipart/form-data">
+	    	<input type="file" name="uploadfile" />
+			<button type="submit">제출</button>
+		</form>-->
+
+
+		<!-- ==================================================================================================================== -->
+
+
+
+<!--      <form class="mt-5" action="#" th:action="@{/product/product_form}" th:object="${product}" method="post">
+	   
+	   <div class="text-right">
+	            <a type="button" class="btn btn-primary"  th:href="@{/product/product_list}">리스트</a>
+	            <button type="submit" class="btn btn-primary">확인</button>
+        </div>
+        
+	        <input type="hidden" th:field="*{id}">
+	         
+	        <div class="form-group">
+	            <label for="name">제목</label>
+	            <input type="text" class="form-control" id="name" th:field="*{name}">
+	        </div>
+	        
+	        <div class="form-group">
+	            <label for="description">내용</label>
+	            <textarea class="form-control" id="description" rows="4" th:field="*{description}"></textarea>
+	        </div>
+	      
+	        <div class="form-group">
+	            <label for="price">내용1</label>
+	            <textarea class="form-control" id="price" rows="4" th:field="*{price}"></textarea>
+	        </div>
+	      
+	       
+      </form>-->
+      
+      
+      
+      
+      	<!--<form class="text-center border border-light p-5" action="/product/product_detailform" th:object="${product}" method="POST" enctype="multipart/form-data">
+
+		
+			<input type="text" name="pname" id="name" class="form-control mb-4"
+				th:field="*{name}">
+
+
+			<input type="text" name="price" id="price" class="form-control mb-4"
+				th:field="*{price}">
+
+
+			<textarea class="form-control mb-4" id="desc" name="desc"
+				th:field="*{description}">Product Description </textarea>
+
+
+			<div class="custom-file mb-4">
+				<input type="file" name="file" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile" th:field="*{image}">Product Image</label>
+			</div>
+
+		
+			<button class="btn btn-info btn-block" type="submit">수정하기</button>
+		</form>-->
+      
+      

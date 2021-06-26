@@ -1,0 +1,97 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('게시판')">
+
+    <link href="/css/detailform.css" th:href="@{/css/detailform.css}" rel="stylesheet">
+
+<!--    <style>
+        .row1 {
+            text-align: left;
+            padding: 0 0 0 50px;
+            height: 500px;
+            background-color: blue;
+        }
+    </style>
+-->
+</head>
+
+<body>
+
+
+    <!--===1 header====================================================================================================-->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('board_list')">
+    </nav>
+
+
+    <div class="container mt-5 mb-5">
+
+        <table class="table1">
+            <p class="person1">******************** 게시판 ******************** </p>
+
+            <tbody class="" th:object="${board}">
+                <tr>
+                    <th scope="row" class="row1 row_1_1 border border-secondary">NO</th>
+                    <td class="row2 row_1_2 border border-secondary">
+                        <h3>[[${board.id}]]</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" class="row1 row_2_1 border border-secondary">제목</th>
+                    <td class="row2 row_2_2 border border-secondary" th:field="*{title}">[[${board.title}]]</td>
+
+                </tr>
+                <tr>
+                    <th scope="row" class="row1 row_3_1 border border-secondary">내용</th>
+                    <td class="row2 row_3_2 border border-secondary" th:field="*{content}">[[${board.content}]]</td>
+
+                </tr>
+                <tr>
+                    <th scope="row" class="row1 row_4_1 border border-secondary">기타</th>
+                    <td class="row2 row_4_2 border border-secondary" th:field="*{content1}">[[${board.content1}]]</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <div th:each="board : ${board}" class="text-center">
+            <div class="board_detail_id" th:text="${board.id}">Otto1</div>
+            <div class="board_detail_title" th:text="${board.title}">Otto2</div>
+            <div class="board_detail_content" th:text="${board.content}">Otto3</div>
+        </div>
+        <div th:each="board : ${board}" class="text-center">
+            <div class="board_detail_id" th:text="${board.id}">Otto1</div>
+            <div class="board_detail_title" th:text="${board.title}">Otto2</div>
+            <div class="board_detail_content" th:text="${board.content}">Otto3</div>
+        </div>
+    </div> -->
+    <!--	<table class="table table-striped">
+		<thead>
+			<tr class="text-center">
+				<th scope="col">title</th>
+				<th scope="col">content</th>
+			</tr>
+		</thead>
+		<tbody>
+		    <tr th:each="board : ${board}" class="text-center">
+		        <td th:text="${board.title}">Otto</td>
+		        <td th:text="${board.content}">Otto</td>
+		    </tr>
+		</tbody>
+	</table>-->
+    <div class="container mb-5">
+        <div class="text-right">
+            <a type="button" class="btn btn-primary" th:href="@{/board/board_form(id=${board.id})}">수정</a>
+            <a th:href="@{/board/deleteProd/{id}(id=${board.id})}" class="btn btn-danger">삭제</a>
+            <a type="button" class="btn btn-primary" th:href="@{/board/board_list}">리스트</a>
+        </div>
+    </div>
+
+
+    <div class="footer" th:replace="fragments/common :: footer2('footer2')">
+    </div>
+
+
+</body>
+
+</html>

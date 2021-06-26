@@ -1,0 +1,165 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('게시판')">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--<link href="/css/starter.css" th:href="@{/css/starter.css}" rel="stylesheet">-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <title>게시판</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('board')">
+    </nav>
+
+    <div class="container mt-5">
+
+        <form class="form-inline d-flex justify-content-end" method="GET" th:action="@{/product/product_list}">
+            <div class="form-grop mx-sm-3 mb-2">
+                <label for="searchText" class="sr-only">검색</label>
+                <input type="text" class="form-control" id="searchText" placeholder="name or desc로 검색" name="searchText" th:value="${param.searchText}">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">검색</button>
+        </form>
+
+        <div>총 건수 : <span th:text="${products.totalElements}"></span></div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">이미지</th>
+<!--                <th scope="col">이미지2</th>
+                <th scope="col">이미지3</th>-->
+                    <th scope="col">번호</th>
+                    <th scope="col">상품명</th>
+                    <th scope="col">설명</th>
+                    <!--    <th scope="col">설명</th>
+                <th scope="col">설명</th>                
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>                
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>                
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>                
+                <th scope="col">설명</th>
+                <th scope="col">설명</th>-->
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <th scope="row"><img alt="" th:src="*{'data:image/jpeg;base64,'+ {product.image}}" style="width: 100px;height: 100px;"></th>
+                    <!--            	<th scope="row"><img alt="" th:src="*{'data:image1/jpeg;base64,'+ {product.image1}}" style="width: 100px;height: 100px;"></th>
+              	<th scope="row"><img alt="" th:src="*{'data:image2/jpeg;base64,'+ {product.image2}}" style="width: 100px;height: 100px;"></th>
+-->
+                    <td><a th:text="${product.id}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                    <td><a th:text="${product.name}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                    <td><a th:text="${product.description}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                    <!--            <td><a th:text="${product.price}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content1}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content2}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content3}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content4}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content5}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content6}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content7}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content8}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content9}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content10}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content11}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content12}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content13}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content14}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content15}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content16}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content17}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content18}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content19}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+                <td><a th:text="${product.content20}" th:href="@{/product/product_detail(id=${product.id})}">Otto</a></td>
+	-->
+                    <td><a th:href="@{/product/deleteProd/{id}(id=${product.id})}" class="btn btn-danger mt-4">delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!--          <ul class="pagination h-100 justify-content-center align-items-center">
+		    <li class="page-item " th:if="${result.prev}">
+		        <a class="page-link" th:href="@{/board/list(page= ${result.start -1})}" tabindex="-1">Previous</a>
+		     </li>
+		     <li th:class=" 'page-item ' + ${result.page == page?'active':''} " th:each="page: ${result.pageList}">
+	 	 		<a class="page-link" th:href="@{/board/list(page = ${page})}"> [[${page}]] </a>
+		     </li>
+		     <li class="page-item" th:if="${result.next}">
+	             <a class="page-link" th:href="@{/board/list(page= ${result.end + 1})}">Next</a>
+		     </li>
+		</ul>-->
+
+        <nav aria-label="Page navigation example">
+            <!--		<ul class="pagination h-100 justify-content-center align-items-center">
+			    <li class="page-item " th:if="${result.prev}">
+			        <a class="page-link" th:href="@{/product/product_list(page= ${result.start -1})}" tabindex="-1">Previous</a>
+			     </li>
+			     
+			     <li th:class=" 'page-item ' + ${result.page == page?'active':''} " th:each="page: ${result.pageList}">
+		 	 		<a class="page-link" th:href="@{/product/product_list(page = ${page})}"> [[${page}]] </a>
+			     </li>
+			     
+			     
+			     <li class="page-item" th:if="${result.next}">
+		             <a class="page-link" th:href="@{/product/product_list(page= ${result.end + 1})}">Next</a>
+			     </li>
+			</ul>-->
+
+            <ul class="pagination justify-content-center">
+                <li class="page-item" th:classappend="${1 == products.pageable.pageNumber + 1} ? 'disabled'">
+                    <a class="page-link" href="#" th:href="@{/product/product_list(page= ${products.pageable.pageNumber - 1},searchText=${param.searchText})}">Previous</a>
+                </li>
+                <li class="page-item" th:classappend="${i == products.pageable.pageNumber + 1} ? 'disabled'" th:each="i : ${#numbers.sequence(startPage, endPage)}">
+                    <a class="page-link" href="#" th:href="@{/product/product_list(page= ${i-1},searchText=${param.searchText})}" th:text="${i}">1</a>
+                </li>
+                <li class="page-item" th:classappend="${products.totalPages == products.pageable.pageNumber + 1} ? 'disabled'">
+                    <a class="page-link" href="#" th:href="@{/product/product_list(page= ${products.pageable.pageNumber + 1},searchText=${param.searchText})}">Next</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="d-md-flex justify-content-md-end">
+            <a type="button" class="btn btn-success mb-2" th:href="@{/product/product_add}">상품 추가</a>
+        </div>
+
+    </div>
+
+    <div id="footer " class="mt-5 bg-warning" role="footer">
+        <div class="footer">
+            <ul>
+                <li>
+                    Copyright&copy; activeBuling.co.kr All Right Reserved
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

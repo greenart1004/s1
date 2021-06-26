@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap&subset=korean');
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ONE-Mobile-POP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ROKABold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.1/ROKABold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SLEIGothicTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SLEIGothicTTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RixYeoljeongdo_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KoreanFrenchTypewriter';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/KoreanFrenchTypewriter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eulyoo1945-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Eulyoo1945-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ELAND_Nice_M';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Y_Spotlight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMEuljiro10yearslater';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/BMEuljiro10yearslater.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CookieRun-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.aa1,
+.bb1,
+.bb1-1,
+.bb1-2,
+.cc1,
+.dd1,
+.ee1,
+.ff1 {
+    /*	  font-family: "Nanum Gothic", sans-serif;*/
+    /*	  font-family: 'EliceDigitalBaeum_Bold';*/
+    /*    font-family: 'Cafe24SsurroundAir';*/
+    /*	  font-family: 'twaysky';*/
+    /*font-family: 'KoreanFrenchTypewriter';*/
+    /*   font-family: 'Eulyoo1945-SemiBold';*/
+    /*   font-family: 'ELAND_Nice_M';*/
+    /*    font-family: 'Y_Spotlight';*/
+    /* 갠찮은폰트  ==============================*/
+    font-family: 'CookieRun-Regular';
+    font-family: 'twayair';
+    /* font-family: 'RixYeoljeongdo_Regular';*/
+    /*   font-family: 'ROKABold';*/
+    /*font-family: 'SLEIGothicTTF';*/
+    /* font-family: 'SEBANG_Gothic_Bold';*/
+    /* font-family: 'ONE-Mobile-POP';*/
+    /* 특별한 사용 ==========================*/
+    /*    font-family: 'BMEuljiro10yearslater';*/
+}
+
+
+/*===================================================================================================*/
+
+.aa1 {
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 50px;
+}
+
+.bb1 {
+    /*  background-color: yellow;*/
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.bb1-1 {
+    text-align: left;
+    font-size: 20px;
+}
+
+.bb1-1 span {
+    color: chocolate;
+    margin-bottom: 50px;
+}
+
+.bb1-2 {
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(30, 72, 210);
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
+.bb1-3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.bb1-4 {
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(30, 72, 210);
+    text-decoration: underline;
+    margin-bottom: 50px;
+}
+
+.bb1-5 {
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.cc1 {
+    /*    color: rgb(11, 15, 238);*/
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.dd1 {
+    color: rgb(11, 15, 238);
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.ee1 {
+    text-align: right;
+    font-size: 16px;
+    margin-bottom: 100px;
+}
+
+.ff1 {
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+
+/*===board=============================================================================*/
+
+.person1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.row1 {
+    text-align: center;
+    padding: 5px;
+    height: 70px;
+    /*    background-color: blue;*/
+    font-size: 30px;
+    width: 150px;
+    ;
+}
+
+.row2 {
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+    width: 500px;
+}
+
+.table1 {
+    /* background-color: rgb(27, 201, 51);
+*/
+    margin: 0 auto;
+}
+
+
+/*
+.row_2_1{
+	height : 100px;
+	
+	
+}*/
+
+.row_3_1 {
+    height: 200px;
+}
+
+
+/*====board.form ====================================================================================================*/
+/*.container1_3_1{
+	width:80%;
+	margin: 0 auto;
+	height:100%;
+	
+}*/
+
+/*====board.list====================================================================================================*/
+
+.board_id{
+	width:80px;
+}
+
+.board_title{
+	text-align: left;
+	width:500px;
+}
+
+.board_content{
+	text-align: left;
+	width:500px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+/*white-space:nowrap;*/
+}
+
+.board_content1{
+		text-align: left;
+	width:200px;
+	overflow:hidden;
+	/*text-overflow: ellipsis;
+	white-space:nowrap;*/
+}
+
+
+
+
+
+
+

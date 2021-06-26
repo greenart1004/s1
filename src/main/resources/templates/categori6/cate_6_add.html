@@ -1,0 +1,189 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('게시판')">
+
+    <title>게시판</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('cate6_index')">
+    </nav>
+    
+    <div class="container my-5">
+
+
+		<form class="text-center border border-light p-5" action="/categori6/cate_6_add" th:object="${cates6}" method="POST" enctype="multipart/form-data">
+
+			<!-- Name -->
+			<input  name="pname" id="name" class="form-control mb-4"
+				placeholder="Product name"></input>
+
+			<!-- Price -->
+			<input  name="price" id="price" class="form-control mb-4"
+				placeholder="Product price 숫자로 입력할것"></input>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="description"
+				placeholder="description"></textarea>
+	
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content1"
+				placeholder="링크"></textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content2"
+				placeholder="content2"></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content3"
+				placeholder="content3"></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content4"
+				placeholder="content4"></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content5"
+				placeholder="content5"></textarea>
+				
+				<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content6"
+				placeholder="content6"></textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content7"
+				placeholder="Product7"></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content8"
+				placeholder="Product8"></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content9"
+				placeholder="Product9"></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content10"
+				placeholder="Product10 "></textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content11"
+				placeholder="Product11"></textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content12"
+				placeholder="##Product12 "></textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content13"
+				placeholder="Product content13">Product content13 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content14"
+				placeholder="Product content14">Product content14 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content15"
+				placeholder="Product content15">Product content15 </textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content16"
+				placeholder="Product content16">Product content16</textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content17"
+				placeholder="Product content17">Product content17 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content18"
+				placeholder="Product content18">Product content18 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content19"
+				placeholder="Product content19">Product content19 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content20"
+				placeholder="Product content20">Product content20 </textarea>
+
+			<!-- image-file etc. -->
+			<div class="custom-file mb-4">
+				<input type="file" name="file" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile" placeholder="Product Image">Product Image</label>
+			</div>
+			
+			<!-- image-file etc. -->
+			<div class="custom-file mb-4">
+				<input type="file" name="file1" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile" placeholder="Product Image1">Product Image1</label>
+			</div>
+			
+			<!-- image-file etc. -->
+			<div class="custom-file mb-4">
+				<input type="file" name="file2" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile" placeholder="Product Image2">Product Image2</label>
+			</div>
+			
+			<!-- Sign in button -->
+			<button class="btn btn-info btn-block" type="submit">add</button>
+		</form>
+		
+ </div>
+
+<!--=====5 footer==================================================================================================-->
+<div class="fs-5 mt-5" th:replace="fragments/common :: footer1('footer1')">
+</div>
+
+<div class="footer" th:replace="fragments/common :: footer2('footer2')">
+</div>
+
+</body>
+
+</html>
+
+
+
+<!--
+<div class="card">
+	<div class="card-header">
+		<p class="h4 mb-2 text-center">Add Product</p>
+	</div>
+	<div class="card-body">-->
+
+		<!-- ==================================================================================================================== -->
+
+	<!--<form class="text-center border border-light p-5" action="/product/product_add" method="POST" enctype="multipart/form-data">
+
+		
+			<input type="text" name="pname" id="name" class="form-control mb-4"
+				placeholder="Product Name">
+
+			
+			<input type="text" name="price" id="price" class="form-control mb-4"
+				placeholder="Product Price">
+
+		
+			<textarea class="form-control mb-4" id="desc" name="desc"
+				placeholder="Product Description">Product Description </textarea>
+
+		
+			<div class="custom-file mb-4">
+				<input type="file" name="file" class="custom-file-input"
+					id="customFile"> <label class="custom-file-label"
+					for="customFile">Product Image</label>
+			</div>
+
+
+			<button class="btn btn-info btn-block" type="submit">add</button>
+		</form>
+-->
+	<!-- ==================================================================================================================== -->
+
+<!--
+	</div>
+</div>-->
+<!-- Default form subscription -->

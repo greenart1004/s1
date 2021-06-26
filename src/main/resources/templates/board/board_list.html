@@ -1,0 +1,76 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('게시판')">
+</head>
+
+<body>
+
+    <!--===1 header====================================================================================================-->
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('board_list')">
+    </nav>
+
+    <div class="cate_1_index_container my-5">
+        <form class="form-inline d-flex justify-content-end" method="GET" th:action="@{/board/board_list}">
+            <div class="form-grop mx-sm-3 mb-2">
+                <label for="searchText" class="sr-only">검색</label>
+                <input type="text" class="form-control" id="searchText" placeholder="검색" name="searchText" th:value="${param.searchText}">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2 mr-2">검색</button>
+            <div class="d-md-flex justify-content-md-end">
+                <a type="button" class="btn btn-primary mb-2" th:href="@{/board/board_list}">전체 리스트</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="container mt-5" style="height: 55%;">
+        <div>총 건수 : <span th:text="${#lists.size(boards)}"></span></div>
+
+        <table class="table table-striped">
+            <thead >
+                <tr class="border border-secondary">
+                    <th class="board_id border border-secondary text-center" scope="col">번호</th>
+                    <th class="board_title border border-secondary text-center" scope="col">제목</th>
+<!--                    <th class="board_content border border-secondary text-center" scope="col">내용</th>-->
+                    <th class="board_content1 border border-secondary text-center" scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="board : ${boards}" class="border border-secondary">
+                    <td class="board_id border border-secondary  text-center"><a th:text="${board.id}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
+                    <td class="board_title border border-secondary  text-center"><a th:text="${board.title}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
+<!--                    <td class="board_content border border-secondary"><a th:text="${board.content}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
+-->                    <td class="board_content1 border border-secondary"><a th:text="${board.content1}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
+                	<!--<a th:href="@{/board/deleteProd/{id}(id=${board.id})}" class="btn btn-danger">delete</a>--></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="cate_1_index_container">
+        <div class="text-right">
+            <a type="button" class="btn btn-primary" th:href="@{/board/board_add}">글쓰기</a>
+            <!-- <a type="button" class="btn btn-primary"  th:href="@{/board/board_add}">설명추가 추가</a>-->
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item" th:classappend="${1 == boards.pageable.pageNumber + 1} ? 'disabled'">
+                    <a class="page-link" href="#" th:href="@{/board/board_list(page= ${boards.pageable.pageNumber - 1},searchText=${param.searchText})}">Previous</a>
+                </li>
+                <li class="page-item" th:classappend="${i == boards.pageable.pageNumber + 1} ? 'disabled'" th:each="i : ${#numbers.sequence(startPage, endPage)}">
+                    <a class="page-link" href="#" th:href="@{/board/board_list(page= ${i-1},searchText=${param.searchText})}" th:text="${i}">1</a>
+                </li>
+                <li class="page-item" th:classappend="${boards.totalPages == boards.pageable.pageNumber + 1} ? 'disabled'">
+                    <a class="page-link" href="#" th:href="@{/board/board_list(page= ${boards.pageable.pageNumber + 1},searchText=${param.searchText})}">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div><br>
+    </div>
+
+
+    <div class="footer" th:replace="fragments/common :: footer2('footer2')">
+    </div>
+</body>
+
+</html>

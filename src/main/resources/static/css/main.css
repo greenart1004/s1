@@ -1,0 +1,194 @@
+	.he {
+        height: 50px;
+        padding: 10px;
+        
+    }
+
+/*  1 title ====================================================================================================================== */
+	.cont_tit1 {background-color: rgba(164, 189, 245, 0.973); height: 150px;}
+
+	
+	/* 2 navbar ====================================================================================================================== */
+	nav > a{ font-weight: bold;
+	}
+	
+	.mpaa{
+	    background-color: #3399cc;
+	    color: #ffffff;
+	}
+	
+	
+	/* 3 컨텐츠 레이아웃 ================================================================================================= */
+	#cont_nav {background-color: #f6fdff;}
+	#cont_tit {background-color: #EAF7FD; background: rgba(154, 216, 244, 0.2); /* ie9부터 적용*/}
+	#cont_ban {background-color: #dceff7;}
+	#cont_cont {background-color: #f6fdff;}
+	
+	/* 전체 메뉴 */
+	/* .nav {overflow: hidden;} */
+	.nav > div {float: left;} 
+	/* .nav > div:last-child {width: 20%;} ie9부터 사용가능 */
+	.nav > div h3 {font-size: 18px; color:#25a2d0; margin-bottom: 5px; padding: 0;     }
+	.nav > div ul {padding: 0; margin: 0;}
+	.nav > div ul li {float: left;}
+	.nav > div.last ul li {width: 100%;}
+	/* .nav > div ul li a:hover {text-decoration: underline;} */
+	
+	
+	/* 7 Categories ================================================================================================================*/
+	
+	.title { 
+	    font-size: 20px;
+	    color: blue;
+	    border: black;
+	}
+	
+	/* 7 Sliders ================================================================================================================*/
+	
+	.Sliders{
+	    width: 230px;
+	}
+		
+	.Slider1{
+	     width: 230px;
+	    height: 300px;
+	}
+
+	.li1{
+	    width: 300px;
+	height: 300px;
+	}
+
+	.Slider1 ul li img{
+	    display: inline-block;
+	    padding: 1px;
+	    width: 100px;
+	    height: auto;
+	}
+	
+	
+/* 7 볼랜드 툴로 3D 텍스트 만들기 ================================================================================================================*/
+
+	.high1{
+		width : 250px;
+		height:auto;
+	} 
+	
+	
+	
+	/* 7 볼랜드 툴로 3D 텍스트 만들기 ================================================================================================================*/
+	.item-lists{
+	    width: auto;
+	    /* width: 100%;
+	    max-width: 375px; */
+	    border: 1px solid rgb(177, 154, 154);
+	    border-radius: 20px;
+	    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+	}
+	
+	.item-lists > h1 {
+	    font-size: 30px;
+	    padding: 20px ;
+	    margin: 12px 0;
+	    border-bottom: 1px solid #d0d0d0;
+	    color: rgb(9, 13, 243);
+	}
+	
+	.item{
+	    border-radius: 8px;
+	    margin-left: 7%;
+	    /* padding: 12px; */
+	    transition: 0.3s;
+	}
+	
+	.item:hover {
+	    box-shadow: 0 4px 12px rgba(0,0,0,0,.1);
+	}
+	
+	.item img{
+	    float:left;
+	    margin-right: 30px;
+	    border-radius: 10px;
+	}
+	
+	/* 푸터 */
+	.footer {padding: 25px 0; text-align: center;}
+	.footer ul {margin-bottom: 20px;}
+	.footer li {position: relative; display: inline; padding: 0 7px 0 10px;}
+	.footer li:before {content: ''; width: 1px; height: 12px; background: #ccc; position: absolute; left: 0; top: 2px;}
+	.footer li:first-child:before {width: 0; height: 0;}
+	.footer .w3c {margin-top: 15px;}
+	
+
+
+
+
+
+
+/* ==================================================================================================================== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	/* font-family: 'Goblin One', cursive; */
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	font-family: 'Merriweather', serif;
+}
+/* ========================================================================================================== */

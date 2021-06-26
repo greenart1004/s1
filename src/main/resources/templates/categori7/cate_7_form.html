@@ -1,0 +1,76 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('게시판')">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <!--   <link href="/css/starter.css" th:href="@{/css/starter.css}" rel="stylesheet">-->
+
+    <title>게시판</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('cate7_index')">
+    </nav>
+    
+    <div class="container my-5">
+	        <h2>수정하기</h2>
+	        
+	<form class="text-center border border-light p-5" action="/categori7/cate_7_form" th:object="${cate_7}" method="POST" enctype="multipart/form-data">
+
+			<input type="hidden" th:field="*{id}">
+				<!-- Sign in button -->
+			<button type="submit" class="btn btn-info">확인</button>
+			<a type="button" class="btn btn-info"  th:href="@{/categori7/cate_7_list}">리스트</a>
+
+		<!-- Name 1111111111111111111111111111111111111111111111111111-->
+			<input type="text" name="name" id="name" class="form-control mb-4"
+				 th:field="*{name}">
+
+			<!-- Price -->
+			<input type="text" name="price" id="price" class="form-control mb-4"
+				 th:field="*{price}">
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="description"
+				 th:field="*{description}">Product Description </textarea>
+
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content1"
+				 th:field="*{content1}">Product content1 </textarea>
+
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content2"
+				 th:field="*{content2}">Product content2 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content3"
+				 th:field="*{content3}">Product content3 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content4"
+				 th:field="*{content4}">Product content4 </textarea>
+				
+			<!-- Description -->
+			<textarea class="form-control mb-4" id="desc" name="content5"
+				 th:field="*{content5}">Product content5 </textarea>
+				
+	</form>
+</div>
+
+<!--=====5 footer==================================================================================================-->
+<div class="fs-5 mt-5" th:replace="fragments/common :: footer1('footer1')">
+</div>
+
+<div class="footer" th:replace="fragments/common :: footer2('footer2')">
+</div>
+</body>
+
+</html>     
+      

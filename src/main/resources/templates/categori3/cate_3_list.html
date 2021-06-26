@@ -1,0 +1,78 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/common :: head('게시판')">
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('cate3_index')">
+    </nav>
+
+    <div class="container mt-5">
+
+        <form class="form-inline d-flex justify-content-end" method="GET" th:action="@{/categori3/cate_3_list}">
+            <div class="form-grop mx-sm-3 mb-2">
+                <label for="searchText" class="sr-only">검색</label>
+                <input type="text" class="form-control" id="searchText" placeholder="name or desc로 검색" name="searchText" th:value="${param.searchText}">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">검색</button>
+        </form>
+
+        <div>총 건수 : <span th:text="${cates3.totalElements}"></span></div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">이미지</th>
+<!--                <th scope="col">이미지2</th>
+                <th scope="col">이미지3</th>-->
+                    <th scope="col">번호</th>
+                    <th scope="col">상품명</th>
+                    <th scope="col">설명</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="cate : ${cates3}">
+                    <th scope="row">
+                    	<!--<img alt="" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}" style="width: 100px;height: 100px;">-->
+                    	<img th:src="@{''}+${cate.content2}" />
+                    </th>           		    <td><a th:text="${cate.id}" th:href="@{/categori3/cate_3_form(id=${cate.id})}">Otto</a></td>
+                    <td><a th:text="${cate.name}" th:href="@{/categori3/cate_3_form(id=${cate.id})}">Otto</a></td>
+                    <td><a th:text="${cate.description}" th:href="@{/categori3/cate_3_form(id=${cate.id})}">Otto</a></td>
+ 
+                    <td><a th:href="@{/categori3/deleteProd/{id}(id=${cate.id})}" class="btn btn-danger mt-4">delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+      <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item" th:classappend="${1 == cates3.pageable.pageNumber + 1} ? 'disabled'">
+                    <a class="page-link" href="#" th:href="@{/categori3/cate_3_list(page= ${cates3.pageable.pageNumber - 1},searchText=${param.searchText})}">Previous</a>
+                </li>
+                <li class="page-item" th:classappend="${i == cates3.pageable.pageNumber + 1} ? 'disabled'" th:each="i : ${#numbers.sequence(startPage, endPage)}">
+                    <a class="page-link" href="#" th:href="@{/categori3/cate_3_list(page= ${i-1},searchText=${param.searchText})}" th:text="${i}">1</a>
+                </li>
+                <li class="page-item" th:classappend="${cates3.totalPages == cates3.pageable.pageNumber + 1} ? 'disabled'">
+                    <a class="page-link" href="#" th:href="@{/categori3/cate_3_list(page= ${cates3.pageable.pageNumber + 1},searchText=${param.searchText})}">Next</a>
+                </li>
+            </ul>
+        </nav>
+      <div class="d-md-flex justify-content-md-end">
+            <a type="button" class="btn btn-primary mb-2 mr-2" th:href="@{/categori3/cate_3_add}">상품 추가</a>
+            <a type="button" class="btn btn-primary mb-2" th:href="@{/}">Home</a>
+        </div>
+
+    </div>
+
+<!--=====5 footer==================================================================================================-->
+<div class="fs-5 mt-5" th:replace="fragments/common :: footer1('footer1')">
+</div>
+
+<div class="footer" th:replace="fragments/common :: footer2('footer2')">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+http://www.activebuling.com/sitemap_Rev1.xml
