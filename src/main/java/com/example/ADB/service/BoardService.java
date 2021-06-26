@@ -3,6 +3,7 @@ package com.example.ADB.service;
 import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -57,8 +58,8 @@ public class BoardService {
     }
 
 
-	public Board detail(Long id) {
-		return boardRepository.findById(id).orElseThrow();
+	public Optional<Board> detail(Long id) {
+		return boardRepository.findById(id);
 
 		}
 //

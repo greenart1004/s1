@@ -2,6 +2,7 @@ package com.example.ADB.controller;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -67,7 +68,7 @@ public class ProductController {
     @GetMapping("/product_detail")
     public String listProducts2(Model model, @RequestParam(required=false) Long id) {   // �옄�꽭�엳蹂닿린
     
-    	Product product2 = productService.detail(id);
+    	Optional<Product> product2 = productService.detail(id);
         
      	model.addAttribute("product2", product2);
 
@@ -121,7 +122,7 @@ public class ProductController {
   
     	productService.saveProductToDB1(id, name, description, price,content1,content2,content3,content4,content5,content6,content7,content8,content9,content10,content11,content12,content13,content14,content15,content16,content17,content18,content19,content20);
 
-    		Product product2 = productService.detail(id);
+    		Optional<Product> product2 = productService.detail(id);
 
     		
     		
