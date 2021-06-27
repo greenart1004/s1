@@ -184,7 +184,7 @@
 </div>
 
     <section class="about" >
-        <div class="inner"  th:each="cate,m : ${cates7}">
+        <div class="inner"  th:each="cate,m : ${cates6}">
             <div class="about-content"  th:if="${m.index+1}%2==1">
                 <div class="photo border">
 	   				<a style="cursor:pointer; color:rgb(21, 10, 245); " th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
