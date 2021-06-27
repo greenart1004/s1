@@ -1,0 +1,160 @@
+/* index.html- 2 card ================================================ */
+html { font-size:10px; }
+
+.cate_1_index_container{
+    width:  80%;
+    margin: 0 auto;
+}    
+
+.card-title{
+	height: 80px;
+	font-size: 1.0rem;
+	color: rgb(128, 0, 64);
+	overflow:hidden; 
+	line-height: 1.2;
+}
+
+.card-text{
+	height: 15px;
+	font-size: 0.8rem;
+	overflow:hidden; 
+	text-overflow: ellipsis; 
+	white-space:nowrap;
+}
+
+/*==index.html- 4 categori 6 ======================================================================================================*/
+
+.about{}
+.inner{ }
+.about-content {
+    flex-wrap: wrap;
+    display: flex;
+    width:  80%;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;         
+                                  /* 세로로 센터 정렬 */
+    justify-content: center;
+                                  /* 가로로 센터 정렬 */
+}
+
+.about-content div {
+    padding: 30px;
+}
+
+/*================================================= */
+.desc {
+    flex: 3 300px;
+  background: #eee;
+}
+
+
+.desc h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+.desc p{
+    font-size: 1.4rem;
+    line-height: 1.7em;  /* 줄간격 */
+    color: rgb(128, 0, 128);
+}
+
+
+.desc a{
+    text-decoration: none;
+    color: #c25a3a;
+    /* height: 100%; */
+}	
+
+/*==index.html- 5 categori 7 ======================================================================================================*/
+
+.cate_6_container {
+    width:  80%;
+    margin: 0 auto;
+}
+
+.cate_6_container *{
+	padding:0;
+	margin:0;
+}
+
+.cate_6_img{
+	width:100%;
+}
+
+.cate_6_body_p1{
+	font-size: 20px;
+	color:rgb(128, 0, 0);
+}
+
+.cate_6_body_p2{
+	font-size: 20px;
+	color:black;
+}
+
+
+
+
+/*===index.html- 5 cupang1 & footer 8=====================================================================================================
+*/.cupang1{
+	font-size: 1.2rem;
+}
+
+	/* 푸터 */
+	.footer {padding: 25px 0; height:150px; text-align: center;}
+	.footer ul {margin-bottom: 20px;}
+	.footer li {position: relative; display: inline; padding: 0 7px 0 10px;}
+	.footer li:before {content: ''; width: 1px; height: 12px; background: #ccc; position: absolute; left: 0; top: 2px;}
+	.footer li:first-child:before {width: 0; height: 0;}
+	.footer .w3c {margin-top: 15px;}
+
+	
+	
+/*===board - 6 board_detail========================================================================*/
+
+.person1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.row1 {
+    text-align: center;
+    padding: 5px;
+    height: 70px;
+    font-size: 30px;
+    width: 150px;
+}
+
+.row2 {
+    text-align: left;
+    padding: 10px;
+    font-size: 20px;
+    width: 500px;
+}
+
+.table1 {
+    margin: 0 auto;
+}
+
+.row_3_1 {
+    height: 200px;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -3,10 +3,6 @@
 
 <head th:replace="fragments/common :: head('즐거운 쇼핑 BulingG 블링지')">
 
-    <link rel="stylesheet" href="/css/cate_1_index.css">
-    <link rel="stylesheet" href="/css/index1.css">
-    <link rel="stylesheet" href="/css/starter.css">
-
 </head>
 
 <body>
@@ -16,253 +12,242 @@
 
 
     <!-- =======2 coupang search ======= -->
-    <div class="b1 mt-5">
-        <iframe src="https://coupa.ng/b0UUeD" width="50%" height="44" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
-    </div><br><br>
+<div class="cate_1_index_container b1 mt-5">
+
+    <iframe src="https://coupa.ng/b0UUeD" width="50%" height="44" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+	<br><br>
 
 
     <!-- =======3 categori product - 1 ======= -->
-    <div class="cate_1_index_container mb-2 position-relative">
+    <div class="position-relative mt-5 fs-1">
         <button type="button" class="btn btn-primary">화장품/미용</button>
         <div type="text" class="btn position-absolute top-0 end-0">
             <a href="/categori/cate_1_index"> 더보기 </a>
         </div>
     </div>
 
-    <div class="cate_1_index_container">
-        <div class="row">
-            <div class="cate_1_index_card col-6 col-sm-4 col-md-3 col-lg-3  col-xl-2 " th:each="cate : ${cates1}">
-                <!-- xs<576px  sm≥576px  md≥768px   lg≥992px   xl≥1200px-->
-                <div class="cate_1_index_img-top p-2">
-                    <a  style="cursor:pointer;" class="img1" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <!--<img alt="" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}">-->
-                        <img  class="p-1" th:src="@{''}+${cate.content2}" />
-                    </a>
-                </div>
-                <div class="cate_1_index_card-body">
-                    <span class="cate_1_index_card-title" th:text="${cate.name}">Card title</span><br><br>
-                    <p class="cate_1_index_card-text" th:text="${cate.description}">This is a wider </p>
-                </div>
-                <div class="cate_1_index_card-footer">
-                    <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <div class="cate_1_index_card-footer-p2 text-center btn-lg btn-primary p-1" th:text="${cate.price}">13,080원</div>
-                    </a>
-                </div>
-            </div><br>
-        </div>
-    </div>
-    <hr><br>
-
+	
+	<div class="row" >
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 p-2" th:each="cate : ${cates1}">
+	        <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	            <img class="w-100 p-2 border" th:src="@{''}+${cate.content2}" />
+	        </a>
+	
+		    <div class="card-body border">
+		        <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+			        <p class="card-title" th:text="${cate.name}">Card title</p>
+			        <p class="card-text"  th:text="${cate.description}">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+	            </a>
+		    </div>
+		    
+		    <div class="text-center mt-2">
+	            <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	                <div class="btn btn-primary " th:text="${cate.price}">13,080원</div>
+	            </a>
+		    </div>
+		</div>
+	</div> <br><br><hr><br><br>
+	
 
     <!-- =======3 categori product - 2 ======= -->
-    <div class="cate_1_index_container mb-2 position-relative">
+    <div class="position-relative fs-1">
         <button type="button" class="btn btn-warning">패션잡화</button>
         <div type="text" class="btn position-absolute top-0 end-0">
             <a href="/categori2/cate_2_index"> 더보기 </a>
         </div>
     </div>
 
-    <div class="cate_1_index_container">
-        <div class="row">
-            <div class="cate_1_index_card col-6 col-sm-4 col-md-3 col-lg-3  col-xl-2 " th:each="cate : ${cates2}">
-                <!-- xs<576px  sm≥576px  md≥768px   lg≥992px   xl≥1200px-->
-                <div class="cate_1_index_img-top">
-                    <a  style="cursor:pointer;" class="img1" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <!--<img alt="" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}">-->
-                        <img class="p-1" th:src="@{''}+${cate.content2}" />
-                    </a>
-                </div>
-                <div class="cate_1_index_card-body">
-                    <span class="cate_1_index_card-title" th:text="${cate.name}">Card title</span><br><br>
-                    <p class="cate_1_index_card-text" th:text="${cate.description}">This is a wider </p>
-                </div>
-                <div class="cate_1_index_card-footer">
-                    <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <div class="cate_1_index_card-footer-p2 text-center btn-lg btn-warning" th:text="${cate.price}">13,080원</div>
-                    </a>
-                </div>
-            </div><br>
-        </div>
-    </div>
-    <hr><br>
-
-    <!-- =======3 categori product - 3 ======= -->
-    <div class="cate_1_index_container mb-2 position-relative">
+	
+	<div class="row" >
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 p-2" th:each="cate : ${cates2}">
+	        <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	            <img class="w-100 p-2 border" th:src="@{''}+${cate.content2}" />
+	        </a>
+	
+		    <div class="card-body border">
+		        <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+			        <p class="card-title" th:text="${cate.name}">Card title</p>
+			        <p class="card-text"  th:text="${cate.description}">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+	            </a>
+		    </div>
+		    
+		    <div class="text-center mt-2">
+	            <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	                <div class="btn btn-warning " th:text="${cate.price}">13,080원</div>
+	            </a>
+		    </div>
+		</div>
+	</div> <br><br><hr><br><br>
+	
+	
+	   <!-- =======3 categori product - 3 ======= -->
+    <div class="position-relative fs-1">
         <button type="button" class="btn btn-info">디지털/가전</button>
         <div type="text" class="btn position-absolute top-0 end-0">
             <a href="/categori3/cate_3_index"> 더보기 </a>
         </div>
     </div>
 
-    <div class="cate_1_index_container">
-        <div class="row">
-            <div class="cate_1_index_card col-6 col-sm-4 col-md-3 col-lg-3  col-xl-2 " th:each="cate : ${cates3}">
-                <!-- xs<576px  sm≥576px  md≥768px   lg≥992px   xl≥1200px-->
-                <div class="cate_1_index_img-top">
-                    <a  style="cursor:pointer;" class="img1" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <!--<img alt="" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}">-->
-                        <img  class="p-1" th:src="@{''}+${cate.content2}" />
-                    </a>
-                </div>
-                <div class="cate_1_index_card-body">
-                    <span class="cate_1_index_card-title" th:text="${cate.name}">Card title</span><br><br>
-                    <p class="cate_1_index_card-text" th:text="${cate.description}">This is a wider </p>
-                </div>
-                <div class="cate_1_index_card-footer">
-                    <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <div class="cate_1_index_card-footer-p2 text-center btn-lg btn-info" th:text="${cate.price}">13,080원</div>
-                    </a>
-                </div>
-            </div><br>
-        </div>
-    </div>
-    <hr><br>
-
-    <!-- =======3 categori product - 4 ======= -->
-    <div class="cate_1_index_container mb-2 position-relative">
+	
+	<div class="row" >
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 p-2" th:each="cate : ${cates3}">
+	        <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	            <img class="w-100 p-2 border" th:src="@{''}+${cate.content2}" />
+	        </a>
+	
+		    <div class="card-body border">
+		        <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+			        <p class="card-title" th:text="${cate.name}">Card title</p>
+			        <p class="card-text"  th:text="${cate.description}">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+	            </a>
+		    </div>
+		    
+		    <div class="text-center mt-2">
+	            <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	                <div class="btn btn-info " th:text="${cate.price}">13,080원</div>
+	            </a>
+		    </div>
+		</div>
+	</div> <br><br><hr><br><br>
+	
+	
+		   <!-- =======3 categori product - 4 ======= -->
+    <div class="position-relative fs-1">
         <button type="button" class="btn btn-danger">가구/인테리어</button>
         <div type="text" class="btn position-absolute top-0 end-0">
             <a href="/categori4/cate_4_index"> 더보기 </a>
         </div>
     </div>
 
-    <div class="cate_1_index_container">
-        <div class="row">
-            <div class="cate_1_index_card col-6 col-sm-4 col-md-3 col-lg-3  col-xl-2 " th:each="cate : ${cates4}">
-                <!-- xs<576px  sm≥576px  md≥768px   lg≥992px   xl≥1200px-->
-                <div class="cate_1_index_img-top">
-                    <a  style="cursor:pointer;" class="img1" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <!--<img alt="" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}">-->
-                        <img  class="p-1" th:src="@{''}+${cate.content2}" />
-                    </a>
-                </div>
-                <div class="cate_1_index_card-body">
-                    <span class="cate_1_index_card-title" th:text="${cate.name}">Card title</span><br><br>
-                    <p class="cate_1_index_card-text" th:text="${cate.description}">This is a wider </p>
-                </div>
-                <div class="cate_1_index_card-footer">
-                    <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <div class="cate_1_index_card-footer-p2 text-center btn-lg btn-danger" th:text="${cate.price}">13,080원</div>
-                    </a>
-                </div>
-            </div><br>
-        </div>
-    </div>
-    <hr><br>
+	
+	<div class="row" >
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 p-2" th:each="cate : ${cates4}">
+	        <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	            <img class="w-100 p-2 border" th:src="@{''}+${cate.content2}" />
+	        </a>
+	
+		    <div class="card-body border">
+		        <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+			        <p class="card-title" th:text="${cate.name}">Card title</p>
+			        <p class="card-text"  th:text="${cate.description}">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+	            </a>
+		    </div>
+		    
+		    <div class="text-center mt-2">
+	            <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	                <div class="btn btn-danger " th:text="${cate.price}">13,080원</div>
+	            </a>
+		    </div>
+		</div>
+	</div> <br><br><hr><br><br>
 
-
-    <!-- =======3 categori product - 5 ======= -->
-    <div class="cate_1_index_container mb-2 position-relative">
+	
+			   <!-- =======3 categori product - 5 ======= -->
+    <div class="position-relative fs-1">
         <button type="button" class="btn btn-success">패션의류</button>
         <div type="text" class="btn position-absolute top-0 end-0">
             <a href="/categori5/cate_5_index"> 더보기 </a>
         </div>
     </div>
 
-    <div class="cate_1_index_container">
-        <div class="row">
-            <div class="cate_1_index_card col-6 col-sm-4 col-md-3 col-lg-3  col-xl-2 " th:each="cate : ${cates5}">
-                <!-- xs<576px  sm≥576px  md≥768px   lg≥992px   xl≥1200px-->
-                <div class="cate_1_index_img-top">
-                    <a  style="cursor:pointer;" class="img1" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <!--<img alt="" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}">-->
-                        <img  class="p-1" th:src="@{''}+${cate.content2}" />
-                    </a>
-                </div>
-                <div class="cate_1_index_card-body">
-                    <span class="cate_1_index_card-title" th:text="${cate.name}">Card title</span><br><br>
-                    <p class="cate_1_index_card-text" th:text="${cate.description}">This is a wider </p>
-                </div>
-                <div class="cate_1_index_card-footer">
-                    <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-                        <div class="cate_1_index_card-footer-p2 text-center btn-lg btn-success" th:text="${cate.price}">13,080원</div>
-                    </a>
-                </div>
-            </div><br>
-        </div>
-    </div>
-    <hr><br>
+	
+	<div class="row" >
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 p-2" th:each="cate : ${cates5}">
+	        <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	            <img class="w-100 p-2 border" th:src="@{''}+${cate.content2}" />
+	        </a>
+	
+		    <div class="card-body border">
+		        <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+			        <p class="card-title" th:text="${cate.name}">Card title</p>
+			        <p class="card-text"  th:text="${cate.description}">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+	            </a>
+		    </div>
+		    
+		    <div class="text-center mt-2">
+	            <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	                <div class="btn btn-success " th:text="${cate.price}">13,080원</div>
+	            </a>
+		    </div>
+		</div>
+	</div> <br><br><hr><br><br>
+</div>	
 
 
     <!-- =======3 categori product - 6 ======= -->
 
- 	<div class="mb-2 cate_1_index_container position-relative" th:each="cate,m : ${cates7}" th:if="${m.index+1}==1">
-	    <div type="button" class="btn btn-primary"></div>
-		<div type="text" class="cate_7_add btn position-absolute top-0 end-0">
-			<a style="cursor:pointer; color:rgb(21, 10, 245);" th:onclick="'location.href=\''+@{${cate.content1}} +'\''"> 자세히보기</a> 
-		</div> 
-	</div>
+<div class="mb-2 cate_1_index_container position-relative" th:each="cate,m : ${cates7}" th:if="${m.index+1}==1">
+    <div type="button" class="btn btn-danger"></div>
+	<div type="text" class="cate_7_add btn position-absolute top-0 end-0">
+		<a style="cursor:pointer; color:rgb(21, 10, 245);" th:onclick="'location.href=\''+@{${cate.content1}} +'\''"> 자세히보기</a> 
+	</div> 
+</div>
 
-	    <section class="about" >
-	        <div class="inner"  th:each="cate,m : ${cates7}">
-	            <div class="about-content"  th:if="${m.index+1}%2==1">
-	                <div class="photo border border-secondary">
-		   				<a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-						   <!-- <img class=" order border-primary" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}">-->
-                        	<img class=" p-1 order border-primary" th:src="@{''}+${cate.content2}" />
-						</a>  
-	                </div>
-	                <div class="desc" >
-	                    <br>
-					    <h2 th:text="${cate.name}"> <b>딱좋아 ABC 주스 </b></h2><br>
-					    <p  th:text="${cate.description}"> <b>100ml, 30개</b></p><br>
-					    <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-	                		<div class="text-center cate_6_body_p3 btn btn-primary p-2" th:text="${cate.price}">13,080원</div>
-	          			</a>	
-	                </div>
-	            </div>
-	        </div>
-	    </section><br><br><br>
+    <section class="about" >
+        <div class="inner"  th:each="cate,m : ${cates7}">
+            <div class="about-content"  th:if="${m.index+1}%2==1">
+                <div class="photo border">
+	   				<a style="cursor:pointer; color:rgb(21, 10, 245); " th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+                    	<img class=" p-1" th:src="@{''}+${cate.content2}" />
+					</a>  
+                </div>
+                <div class="desc" >
+                    <br>
+				    <h2 th:text="${cate.name}"> <b>딱좋아 ABC 주스 </b></h2><br>
+				    <p  th:text="${cate.description}"> <b>100ml, 30개</b></p><br>
+				    <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+                		<div class="text-center cate_6_body_p3 btn btn-danger p-2" th:text="${cate.price}">13,080원</div>
+          			</a>	
+                </div>
+            </div>
+        </div>
+    </section><br><br><br>
 
 
- 	<div class="mb-2 cate_1_index_container position-relative" th:each="cate,m : ${cates7}" th:if="${m.index+1}==2">
-	    <div type="button" class="btn btn-primary"></div>
-		<div type="text" class="cate_7_add btn position-absolute top-0 end-0">
-			<a style="cursor:pointer; color:rgb(21, 10, 245);" th:onclick="'location.href=\''+@{${cate.content1}} +'\''"> 자세히보기</a> 
-		</div> 
-	</div>
-		    
-	    <section class="about">
-	        <div class="inner" th:each="cate,m : ${cates7}">
-	            <div class="about-content " th:if="${m.index+1}%2==0">
-	                <div class="desc"  >
-	                    <br>
-					    <h2 th:text="${cate.name}"> <b>딱좋아 ABC 주스 </b></h2><br>
-					    <p  th:text="${cate.description}"> <b>100ml, 30개</b></p><br>
-					    <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-	                		<div class="text-center cate_6_body_p3 btn btn-primary p-2" th:text="${cate.price}">13,080원</div>
-	          			</a>	                
-	          		</div>
-	                <div class="photo border border-secondary" >
+<div class="mb-2 cate_1_index_container position-relative" th:each="cate,m : ${cates7}" th:if="${m.index+1}==2">
+    <div type="button" class="btn btn-danger"></div>
+	<div type="text" class="cate_6_add btn position-absolute top-0 end-0">
+		<a style="cursor:pointer; color:rgb(21, 10, 245);" th:onclick="'location.href=\''+@{${cate.content1}} +'\''"> 자세히보기</a> 
+	</div> 
+</div>
+	    
+    <section class="about">
+        <div class="inner" th:each="cate,m : ${cates6}">
+            <div class="about-content " th:if="${m.index+1}%2==0">
+                <div class="desc"  >
+                    <br>
+				    <h2 th:text="${cate.name}"> <b>딱좋아 ABC 주스 </b></h2><br>
+				    <p  th:text="${cate.description}"> <b>100ml, 30개</b></p><br>
+				    <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+                		<div class="text-center cate_6_body_p3 btn btn-danger p-2" th:text="${cate.price}">13,080원</div>
+          			</a>	                
+          		</div>
+                <div class="photo border" >
 	   				<a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-						   <!-- <img class=" order border-primary" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}">-->
-                           <img class="p-1 order border-primary" th:src="@{''}+${cate.content2}" />
+	                    <img class="p-1" th:src="@{''}+${cate.content2}" />
 					</a>
-	                </div>
-	            </div>
-	    	</div>
-		</section><br><br>
-	</div> <br><hr><br>
+                </div>
+            </div>
+    	</div>
+	</section><br><br>
+</div> <br><hr><br>
 
 
 <!-- =======3 categori product - 7 ======= -->
-<div class="cate_6_container">
+<div class="cate_6_container ">
 
 	<div class="mb-2 position-relative">
-	   <div type="button" class="btn btn-primary"></div>
-	<div type="text" class="cate_6_add btn position-absolute top-0 end-0"><a href="/categori6/cate_6_index">더보기</a>
+	    <div type="button" class="btn btn-primary"></div>
+	    <div type="text" class="cate_7_add btn position-absolute top-0 end-0"><a href="/categori7/cate_7_index">더보기</a></div>
 	</div>
 
 	 <div class="navbar navbar-expand-md navbar-primary bg-primary mb-3 color-light"  style="height : 40px;">
 		<div class="cate_1_index_navbar order border-primary">
-			<!--총 건수 : <span th:text="${cates.totalElements}"></span>-->
 		</div>
 	</div>
 	
- </div>
-
-	<div class="row  " >
-	    <div class="row col-lg-6 col-md-12 mb-5 "  th:each="cate,m : ${cates6}">
+	<div class="row" >
+	    <div class="row col-lg-6 col-md-12 mb-5 "  th:each="cate,m : ${cates7}">
 			<div class=" col-lg-4 col-md-4 p-2 border border-secondary">
 				<a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
 				   <!-- <img class="cate_6_img" alt="" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}">-->
@@ -274,10 +259,9 @@
 			    <p class="cate_6_body_p1" th:text="${cate.name}"> <b>딱좋아 ABC 주스, </b></p><br>
 			    <p class="cate_6_body_p2" th:text="${cate.description}"> <b>100ml, 30개</b></p><br>
 	   		
-			    <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+			    <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
 	                <div class="text-center cate_6_body_p3 btn btn-primary p-2" th:text="${cate.price}">13,080원</div>
 	            </a>
-	   			
 			</div><br><br> 
 	    </div> <hr>
 	</div>    

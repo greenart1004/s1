@@ -111,189 +111,44 @@
     font-style: normal;
 }
 
-.aa1,
-.bb1,
-.bb1-1,
-.bb1-2,
-.cc1,
-.dd1,
-.ee1,
-.ff1 {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
     /*	  font-family: "Nanum Gothic", sans-serif;*/
-    /*	  font-family: 'EliceDigitalBaeum_Bold';*/
-    /*    font-family: 'Cafe24SsurroundAir';*/
-    /*	  font-family: 'twaysky';*/
+    	  font-family: 'EliceDigitalBaeum_Bold';
+        /*font-family: 'Cafe24SsurroundAir';*/
+   	/*  font-family: 'twaysky';*/
     /*font-family: 'KoreanFrenchTypewriter';*/
-    /*   font-family: 'Eulyoo1945-SemiBold';*/
-    /*   font-family: 'ELAND_Nice_M';*/
-    /*    font-family: 'Y_Spotlight';*/
+	 /*font-family: 'Eulyoo1945-SemiBold';*/
+   /*   font-family: 'ELAND_Nice_M';*/
+     /*  font-family: 'Y_Spotlight';*/
     /* 갠찮은폰트  ==============================*/
-    font-family: 'CookieRun-Regular';
-    font-family: 'twayair';
+    
+    
+/*    font-family: 'CookieRun-Regular';*/
+    /*	font-family: 'twayair';*/
     /* font-family: 'RixYeoljeongdo_Regular';*/
-    /*   font-family: 'ROKABold';*/
-    /*font-family: 'SLEIGothicTTF';*/
-    /* font-family: 'SEBANG_Gothic_Bold';*/
-    /* font-family: 'ONE-Mobile-POP';*/
+/*      font-family: 'ROKABold';*/
+   /* font-family: 'SLEIGothicTTF';*/
+     /*font-family: 'SEBANG_Gothic_Bold';*/
+    /*font-family: 'ONE-Mobile-POP';*/
     /* 특별한 사용 ==========================*/
     /*    font-family: 'BMEuljiro10yearslater';*/
 }
 
 
 /*===================================================================================================*/
-
-.aa1 {
-    text-align: center;
-    font-size: 55px;
-    margin-bottom: 50px;
-}
-
-.bb1 {
-    /*  background-color: yellow;*/
-    font-size: 25px;
-    margin-bottom: 50px;
-}
-
-.bb1-1 {
-    text-align: left;
-    font-size: 20px;
-}
-
-.bb1-1 span {
-    color: chocolate;
-    margin-bottom: 50px;
-}
-
-.bb1-2 {
-    font-size: 30px;
-    cursor: pointer;
-    color: rgb(30, 72, 210);
-    text-decoration: underline;
-    margin-bottom: 50px;
-}
-
-.bb1-3 {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.bb1-4 {
-    font-size: 20px;
-    cursor: pointer;
-    color: rgb(30, 72, 210);
-    text-decoration: underline;
-    margin-bottom: 50px;
-}
-
-.bb1-5 {
-    cursor: pointer;
-    margin-bottom: 50px;
-}
-
-.cc1 {
-    /*    color: rgb(11, 15, 238);*/
-    font-size: 20px;
-    margin-bottom: 50px;
-}
-
-.dd1 {
-    color: rgb(11, 15, 238);
-    font-size: 20px;
-    margin-bottom: 50px;
-}
-
-.ee1 {
-    text-align: right;
-    font-size: 16px;
-    margin-bottom: 100px;
-}
-
-.ff1 {
-    font-size: 16px;
-    margin-bottom: 50px;
-}
-
-
-/*===board=============================================================================*/
-
-.person1 {
-    text-align: center;
-    font-size: 40px;
-}
-
-.row1 {
-    text-align: center;
-    padding: 5px;
-    height: 70px;
-    /*    background-color: blue;*/
-    font-size: 30px;
-    width: 150px;
-    ;
-}
-
-.row2 {
-    text-align: left;
-    padding: 10px;
-    font-size: 20px;
-    width: 500px;
-}
-
-.table1 {
-    /* background-color: rgb(27, 201, 51);
-*/
-    margin: 0 auto;
-}
-
-
-/*
-.row_2_1{
-	height : 100px;
-	
-	
-}*/
-
-.row_3_1 {
-    height: 200px;
-}
-
-
-/*====board.form ====================================================================================================*/
-/*.container1_3_1{
-	width:80%;
-	margin: 0 auto;
-	height:100%;
-	
-}*/
-
-/*====board.list====================================================================================================*/
-
-.board_id{
-	width:80px;
-}
-
-.board_title{
-	text-align: left;
-	width:500px;
-}
-
-.board_content{
-	text-align: left;
-	width:500px;
-	overflow:hidden;
-	text-overflow: ellipsis;
-/*white-space:nowrap;*/
-}
-
-.board_content1{
-		text-align: left;
-	width:200px;
-	overflow:hidden;
-	/*text-overflow: ellipsis;
-	white-space:nowrap;*/
-}
-
-
-
 
 
 

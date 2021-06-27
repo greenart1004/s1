@@ -34,25 +34,26 @@
 	</div>
 </div>
 
-  <div class="cate_1_index_container">
-	<div class="row">
-	  <div class="cate_1_index_card col-6 col-sm-4 col-md-3 col-lg-3  col-xl-2 " th:each="cate : ${cates4}">  <!-- xs<576px  sm≥576px  md≥768px   lg≥992px   xl≥1200px-->
-		<div class="cate_1_index_img-top">
-		    <a  class="img1" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">  
-			      <!--<img alt="" th:src="*{'data:image/jpeg;base64,'+ {cate.image}}" >-->
-			      <img th:src="@{''}+${cate.content2}" />
-		    </a>
+<div class="cate_1_index_container">
+	<div class="row" >
+		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-2 p-2" th:each="cate : ${cates4}">
+	        <a style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	            <img class="w-100 p-2 border" th:src="@{''}+${cate.content2}" />
+	        </a>
+	
+		    <div class="card-body border">
+		        <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+			        <p class="card-title" th:text="${cate.name}">Card title</p>
+			        <p class="card-text"  th:text="${cate.description}">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+	            </a>
+		    </div>
+		    
+		    <div class="text-center mt-2">
+	            <a  style="cursor:pointer;" th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
+	                <div class="btn btn-primary " th:text="${cate.price}">13,080원</div>
+	            </a>
+		    </div>
 		</div>
-		<div class="cate_1_index_card-body">
-		      <span class="cate_1_index_card-title" th:text="${cate.name}">Card title</span><br><br>
-		      <p class="cate_1_index_card-text" th:text="${cate.description}">This is a wider </p>
-		</div>
-		<div class="cate_1_index_card-footer">
-		<a th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
-	    	<div class="cate_1_index_card-footer-p2 text-center btn-lg btn-danger" th:text="${cate.price}">13,080원</div>  
-		</a>
-		</div>
-	  </div><br>
 	</div>
 </div>
 
