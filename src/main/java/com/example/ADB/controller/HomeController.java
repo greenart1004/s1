@@ -108,7 +108,7 @@ public class HomeController {
 	    	model.addAttribute("cates5", cates5);
 	    	
 	    	
-	    	//데이타관련
+		    	//데이타관련
 			Page<Cate6> cates6;
 	    	if(searchText == "") {
 	    		cates6 = cate6Repositry.findAll(pageable);
@@ -191,17 +191,17 @@ public class HomeController {
 	    	model.addAttribute("cates5", cates5);
 	    	
 	    	
-	    	//데이타관련
+		   	//데이타관련
 			Page<Cate6> cates6;
 	    	if(searchText == "") {
 	    		cates6 = cate6Repositry.findAll(pageable);
 			}else{
 				cates6 = cate6Repositry.findByNameContainingOrDescriptionContaining(searchText, searchText, pageable);
 			}
-	    	
 	    	model.addAttribute("cates6", cates6);
 	    	
-	    	//데이타관련
+	    	
+  	    	//데이타관련
 			Page<Cate7> cates7;
 	    	if(searchText == "") {
 	    		cates7 = cate7Repositry.findAll(pageable);

@@ -4,15 +4,6 @@
 
     <link href="/css/detailform.css" th:href="@{/css/detailform.css}" rel="stylesheet">
 
-<!--    <style>
-        .row1 {
-            text-align: left;
-            padding: 0 0 0 50px;
-            height: 500px;
-            background-color: blue;
-        }
-    </style>
--->
 </head>
 
 <body>
@@ -27,28 +18,28 @@
     <div class="container mt-5 mb-5">
     
         <table class="table1">
-            <p class="person1">******************** 게시판 ******************** </p>
+            <p class="person1 mb-5">******************** 게시판 ******************** </p>
 
-            <tbody class="" th:object="${board}">
+            <tbody  th:object="${board}">
             <input type="hidden" th:field="*{id}">
                 <tr>
-                    <th scope="row" class="row1 row_1_1 border border-secondary">NO</th>
+                    <th scope="row" class="align-middle row1 row_1_1 border border-secondary">NO</th>
                     <td class="row2 row_1_2 border border-secondary" th:field="*{id}">  
 						<h2>[[${board.id}]] </h2>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row" class="row1 row_2_1 border border-secondary">제목</th>
+                    <th scope="row" class="align-middle row1 row_2_1 border border-secondary">제목</th>
                     <td class="row2 row_2_2 border border-secondary" th:field="*{title}" >[[${board.title}]]</td>
 
                 </tr>
                 <tr>
-                    <th scope="row" class="row1 row_3_1 border border-secondary">내용</th>
+                    <th scope="row" class="align-middle row1 row_3_1 border border-secondary">내용</th>
                     <td class="row2 row_3_2 border border-secondary" th:field="*{content}"> [[${board.content}]]</td>
 
                 </tr>
                 <tr>
-                    <th scope="row" class="row1 row_4_1 border border-secondary">기타</th>
+                    <th scope="row" class="align-middle row1 row_4_1 border border-secondary">기타</th>
                     <td class="row2 row_4_2 border border-secondary" th:field="*{content1}">[[${board.content1}]]</td>
                 </tr>
             </tbody>
@@ -83,7 +74,7 @@
     <div class="container mb-5">
         <div class="text-right">
             <a type="button" class="btn btn-primary" th:href="@{/board/board_form(id=${board.id})}">수정</a>
-            <a th:href="@{/board/deleteProd/{id}(id=${board.id})}" class="btn btn-danger">삭제</a>
+  <!--          <a th:href="@{/board/deleteProd/{id}(id=${board.id})}" class="btn btn-danger">삭제</a>-->
             <a type="button" class="btn btn-primary" th:href="@{/board/board_list}">리스트</a>
         </div>
     </div>

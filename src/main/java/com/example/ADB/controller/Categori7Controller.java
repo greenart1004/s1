@@ -36,7 +36,7 @@ public class Categori7Controller {
 	//======================================================================================================	
 	
 	@GetMapping("/cate_7_index")
-    public String list(Model model, @PageableDefault(size=2) Pageable pageable, 
+    public String list(Model model, @PageableDefault(size=12) Pageable pageable, 
 			@RequestParam(required=false, defaultValue="") String searchText){
 		
 		//search 관련

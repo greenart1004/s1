@@ -10,14 +10,14 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:replace="fragments/common :: menu('home')">
     </nav>
 
-
     <!-- =======2 coupang search ======= -->
 <div class="cate_1_index_container b1 mt-5">
+
 	<div class="text-center">
 	    <iframe src="https://coupa.ng/b0UUeD" width="50%" height="44" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
 		<br><br>
 	</div>
-
+	
     <!-- =======3 categori product - 1 ======= -->
     <div class="position-relative mt-5 fs-1">
         <button type="button" class="btn btn-primary">화장품/미용</button>
@@ -185,7 +185,7 @@
 
     <section class="about" >
         <div class="inner"  th:each="cate,m : ${cates6}">
-            <div class="about-content"  th:if="${m.index+1}%2==1">
+            <div class="about-content"  th:if="${(m.index+1)%2==1 and (m.index+1) lt 3 }">
                 <div class="photo border">
 	   				<a style="cursor:pointer; color:rgb(21, 10, 245); " th:onclick="'location.href=\''+@{${cate.content1}} +'\''">
                     	<img class=" p-1" th:src="@{''}+${cate.content2}" />
@@ -212,9 +212,10 @@
 </div>
 	    
     <section class="about">
-        <div class="inner" th:each="cate,m : ${cates6}">
-            <div class="about-content " th:if="${m.index+1}%2==0">
-                <div class="desc"  >
+        <div class="inner" th:each="cate,m : ${cates6}" >
+      		<!--  th:if="${evaluation &lt; 49 and evaluation &gt; 29}"-->
+            <div class="about-content " th:if="${(m.index+1)%2==0 and (m.index+1) lt 3 } ">
+                <div class="desc">
                     <br>
 				    <h2 th:text="${cate.name}"> <b>딱좋아 ABC 주스 </b></h2><br>
 				    <p  th:text="${cate.description}"> <b>100ml, 30개</b></p><br>

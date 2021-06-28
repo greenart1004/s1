@@ -25,22 +25,22 @@
 
     <div class="container mt-5" style="height: 55%;">
         <div>총 건수 : <span th:text="${boards.totalElements}"></span></div>
-        <table class="table table-striped mt-1">
+        <table class="table table-striped">
             <thead >
                 <tr class="border border-secondary">
-                    <th class="border border-secondary text-center" scope="col">번호</th>
-                    <th class="border border-secondary text-center" scope="col">제목</th>
-<!--                    <th class="board_content border border-secondary text-center" scope="col">내용</th>-->
-                    <th class="border border-secondary text-center" scope="col">비고</th>
+                    <th class="board_id border border-secondary text-center" scope="col">번호</th>
+                    <th class="board_title border border-secondary text-center" scope="col">제목</th>
+                    <th class="board_content border border-secondary text-center" scope="col">내용</th>
+                    <th class="board_content1 border border-secondary text-center" scope="col">비고</th>
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="board : ${boards}" class="border border-secondary">
-                    <td class="border border-secondary  text-center"><a th:text="${board.id}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
-                    <td class="border border-secondary  text-center"><a th:text="${board.title}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
-<!--                    <td class="board_content border border-secondary"><a th:text="${board.content}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
--->                    <td class="border border-secondary"><a th:text="${board.content1}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
-                	<!--<td><a th:href="@{/board/deleteProd/{id}(id=${board.id})}" class="btn btn-danger">delete</a>--></td>
+                    <td class="board_id border border-secondary  text-center"><a th:text="${board.id}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
+                    <td class="board_title border border-secondary  text-center"><a th:text="${board.title}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
+<!--                <td class="board_content border border-secondary"><a th:text="${board.content}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
+-->                 <td class="board_content1 border border-secondary"><a th:text="${board.content1}" th:href="@{/board/board_detail(id=${board.id})}">Otto</a></td>
+                	<td><a th:href="@{/board/deleteProd/{id}(id=${board.id})}" class="btn btn-danger">delete</a></td>
                 </tr>
             </tbody>
         </table>
